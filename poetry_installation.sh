@@ -2,7 +2,8 @@ venv_name=py38
 py_version=3.8
 
 # create and activate conda venv
-conda create -n ${venv_name} python=${py_version}
+conda create -y -n ${venv_name} python=${py_version}
+conda init
 source $HOME/.bashrc
 
 conda activate ${venv_name}
