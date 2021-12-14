@@ -37,15 +37,13 @@ Note with solution 2, you can use sh or ./ to run the script. Because they will 
 When the script finishes, they get out the sub shell and the export will be lost. Use **source** instead.
 
 ```shell
+#! /bin/bash
+host_name="minio.lab.sspcloud.fr"
 access_key="changeMe"
 secret_key="changeMe"
 token="changeMe"
-host="minio.lab.sspcloud.fr"
-mc_creds=https://${access_key}:${secret_key}:${token}@${host}
-echo "MC_HOST_s3: ${mc_creds}"
-
 unset MC_HOST_s3
-export MC_HOST_s3=${mc_creds}
+export MC_HOST_s3=https://${access_key}:${secret_key}:${token}@${host_name}
 ```
 
 ## 3. Admin operations
