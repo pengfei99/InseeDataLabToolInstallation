@@ -43,7 +43,12 @@ access_key="changeMe"
 secret_key="changeMe"
 token="changeMe"
 unset MC_HOST_s3
+
 export MC_HOST_s3=https://${access_key}:${secret_key}:${token}@${host_name}
+
+# note token is optional, if your don't have token, use below command
+export MC_HOST_s3=https://${access_key}:${secret_key}:@${host_name}
+
 ```
 
 ## 3. Admin operations
